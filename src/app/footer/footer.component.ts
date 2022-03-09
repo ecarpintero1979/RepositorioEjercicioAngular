@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -11,4 +11,10 @@ export class MyFooterComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input() footer: string;
+  @Output() setFooterEvent = new EventEmitter();
+
+  updateFooter(param1: string) {
+    alert('Actualizando....');
+    this.setFooterEvent.emit(param1);
+  }
 }

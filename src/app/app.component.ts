@@ -17,8 +17,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   temp: string = '21';
-  header: string = 'FORECAST NEW';
-  footer: string = 'FOOTER NEW';
+  header: string = 'FORECAST';
+  footer: string = 'FOOTER';
+
+  UpdateFooterText(current: string) {
+    this.footer = current;
+  }
 }
 
 // Ejercicio 4: Eventos que modifican variables de otros componentTypes

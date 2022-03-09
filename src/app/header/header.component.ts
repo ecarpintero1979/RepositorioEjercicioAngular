@@ -15,6 +15,6 @@ export class MyHeaderComponent implements OnInit {
 
   updateCity(ciudad: string) {
     alert('Actualizando.... ' + ciudad);
-    this.setCityEvent.emit(ciudad);
+    //this.setCityEvent.emit(ciudad);
   }
 }

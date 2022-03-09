@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -10,5 +10,5 @@ export class MyBodyComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  temp = 23;
+  @Input string temp;
 }

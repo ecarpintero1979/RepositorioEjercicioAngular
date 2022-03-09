@@ -1,8 +1,11 @@
 <app-header
-  header="{{ header }}"
-  (setCityEvent)="actualizarTemperatura($event)"
+  title="{{ title }}"
+  (setCityTempEvent)="actualizarTemperatura($event)"
+  (setCityNameEvent)="actualizarCiudad($event)"
 ></app-header>
-<app-body bind-temp="temp" bind-city="city"></app-body>
+
+<app-body bind-temp="temp" bind-city="city" bind-imagen="imagen"></app-body>
+
 <app-footer
   [footer]="footer"
   (setFooterEvent)="updateFooterText($event)"

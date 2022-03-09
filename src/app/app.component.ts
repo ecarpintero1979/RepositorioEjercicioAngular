@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   city: string = 'NEW YORK';
   temp: string = '21';
-  header: string = 'FORECAST';
+  imagen: string =
+    'https://i.pinimg.com/736x/3d/3d/20/3d3d2006fb63b4d3612ce408752ac3bf.jpg';
+  title: string = 'FORECAST';
   footer: string = 'FOOTER';
 
   updateFooterText(current: string) {
@@ -17,6 +19,10 @@ export class AppComponent {
 
   actualizarTemperatura(current: string) {
     this.temp = current;
+  }
+
+  actualizarCiudad(current: string) {
+    this.city = current;
   }
 }
 
@@ -47,7 +53,7 @@ export class AppComponent {
 // 1.) Los botones tienen que funcionar para cambiar la temperatura
 // 2.) Añadir otro output con el nombre de la ciudad y emitir un nuevo evento en la funcion setCity
 // 3.) En el template del padre añado un manejador de evento para el nuevo evento (setCityNameEvent)
-// 4.) Este evento invocará a la funcion actualizar ciudad que crearemos en el padre <app-topbanner (setCityNameEvent)="actualizarCiudad($event)"></app-topbanner> y además pasar la ciudad al app-location <app-location [ciudad]="ciudad"></app-location>
+// 4.) Este evento invocará a la función actualizar ciudad que crearemos en el padre <app-topbanner (setCityNameEvent)="actualizarCiudad($event)"></app-topbanner> y además pasar la ciudad al app-location <app-location [ciudad]="ciudad"></app-location>
 // 5.) En el ts del padre, creo la función actualizarCiudad que se encargará de modificar la variable ciudad que tendremos que crear.
 // 6.) En el template del hijo LOCATION tendremos que usar directivas para mostrar diferente imágenes en función de la ciudadv clicada
 //    a) Sevilla: "https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/YZQY7B2VJNIHJNI2NUTNEER4UQ.jpg"

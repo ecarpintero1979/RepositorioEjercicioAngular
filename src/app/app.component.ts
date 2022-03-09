@@ -16,17 +16,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  city: string = 'NEW YORK';
   temp: string = '21';
   header: string = 'FORECAST';
   footer: string = 'FOOTER';
 
-  UpdateFooterText(current: string) {
+  updateFooterText(current: string) {
     this.footer = current;
+  }
+
+  actualizarTemperatura(current: string) {
+    this.temp = current;
   }
 }
 
 // Ejercicio 4: Eventos que modifican variables de otros componentTypes
-// 1.) En el hijo creamos 3 botones (Madrid, Sevilla, La Coruñan)
+// 1.) En el hijo creamos 3 botones (Madrid, Sevilla, La Coruña)
 // 2.) < button on-click="setCity('Sevilla')">Sevilla</button>
 // 3.) Vamos al archivo ts del hijo:
 //    a) Creamos la funcion declarada (setCity)

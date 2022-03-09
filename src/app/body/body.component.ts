@@ -11,4 +11,5 @@ export class MyBodyComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input() temp: string;
+  @Input() city: string;
 }

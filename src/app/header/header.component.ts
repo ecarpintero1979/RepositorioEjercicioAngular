@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,4 +11,10 @@ export class MyHeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input() header: string;
+  @Output() setCityEvent = new EventEmitter();
+
+  updateCity(ciudad: string) {
+    alert('Actualizando.... ' + ciudad);
+    this.setCityEvent.emit(ciudad);
+  }
 }

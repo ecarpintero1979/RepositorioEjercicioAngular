@@ -1,8 +1,11 @@
-<app-header header="{{ header }}"></app-header>
-<app-body bind-temp="temp"></app-body>
+<app-header
+  header="{{ header }}"
+  (setCityEvent)="actualizarTemperatura($event)"
+></app-header>
+<app-body bind-temp="temp" bind-city="city"></app-body>
 <app-footer
   [footer]="footer"
-  (setFooterEvent)="UpdateFooterText($event)"
+  (setFooterEvent)="updateFooterText($event)"
 ></app-footer>
 
 <!--DISTINTAS FORMAS DE PASAR UNA VARIABLE -->

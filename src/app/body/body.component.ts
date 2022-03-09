@@ -12,5 +12,4 @@ export class MyBodyComponent implements OnInit {
 
   @Input() temp: string;
   @Input() city: string;
-  @Input() imagen: string;
 }

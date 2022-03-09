@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   city: string = 'NEW YORK';
   temp: string = '21';
-  imagen: string =
-    'https://i.pinimg.com/736x/3d/3d/20/3d3d2006fb63b4d3612ce408752ac3bf.jpg';
   title: string = 'FORECAST';
   footer: string = 'FOOTER';
 

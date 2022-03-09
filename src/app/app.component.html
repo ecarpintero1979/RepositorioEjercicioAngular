@@ -4,7 +4,7 @@
   (setCityNameEvent)="actualizarCiudad($event)"
 ></app-header>
 
-<app-body bind-temp="temp" bind-city="city" bind-imagen="imagen"></app-body>
+<app-body bind-temp="temp" bind-city="city"></app-body>
 
 <app-footer
   [footer]="footer"
@@ -12,6 +12,6 @@
 ></app-footer>
 
 <!--DISTINTAS FORMAS DE PASAR UNA VARIABLE -->
-<!-- <app-body temp="{{temp}}"></app-body> -->
-<!-- <app-footer [temp]="temp"></app-footer> -->
-<!-- <app-body [temp]="temp"></app-body> -->
+<!-- <app-body temp="{{temp}}"></app-body> En este caso solo se pasa el valor de un texto -->
+<!-- <app-footer [temp]="temp"></app-footer> En este caso se pueden pasar objetos completos -->
+<!-- <app-body [temp]="temp"></app-body> En este caso también se pueden pasar objetos completos -->

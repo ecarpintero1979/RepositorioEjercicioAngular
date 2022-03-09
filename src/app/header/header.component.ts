@@ -14,12 +14,16 @@ export class MyHeaderComponent implements OnInit {
   @Output() setCityEvent = new EventEmitter();
 
   updateCity(ciudad: string) {
-    alert('Actualizando.... ' + ciudad);
-    /*
-    switch{
-      case 
+    switch (ciudad) {
+      case 'MADRID':
+        this.setCityEvent.emit('23');
+        break;
+      case 'SEVILLA':
+        this.setCityEvent.emit('30');
+        break;
+      case 'LA CORUÑA':
+        this.setCityEvent.emit('18');
+        break;
     }
-    */
-    //this.setCityEvent.emit(ciudad);
   }
 }

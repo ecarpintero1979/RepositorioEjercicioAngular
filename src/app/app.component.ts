@@ -16,5 +16,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  temp = '21';
+  temp: string = '21';
+  header: string = 'FORECAST NEW';
+  footer: string = 'FOOTER NEW';
 }

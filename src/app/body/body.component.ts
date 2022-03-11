@@ -15,9 +15,9 @@ export class MyBodyComponent implements OnInit {
   @Input() city: string;
 
   convertirToC() {
-    newTemp = this.tempConverter.pasarACelsius(Number(this.temp));
+    this.temp = this.tempConverter.pasarACelsius(Number(this.temp)).toString();
   }
   convertirToK() {
-    this.tempConverter.pasarAKelvin(Number(this.temp));
+    this.temp = this.tempConverter.pasarAKelvin(Number(this.temp)).toString();
   }
 }

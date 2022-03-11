@@ -7,15 +7,17 @@ import { TemperaturaService } from '../temperatura.service';
   styleUrls: ['./body.component.css'],
 })
 export class MyBodyComponent implements OnInit {
-  constructor(private logger: TemperaturaService) {}
+  constructor(private tempConverter: TemperaturaService) {}
 
   ngOnInit(): void {}
 
   @Input() temp: string;
   @Input() city: string;
 
-  convertir() {
-    this.logger.pasarACelsius();
-    this.looger.pasarAKelvin();
+  convertirToC() {
+    newTemp = this.tempConverter.pasarACelsius(Number(this.temp));
+  }
+  convertirToK() {
+    this.tempConverter.pasarAKelvin(Number(this.temp));
   }
 }

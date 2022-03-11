@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TemperaturaService {
   constructor() {}
-  
+
   pasarAKelvin(gradosCelsius: number) {
     return gradosCelsius + 273;
   }
@@ -11,5 +11,4 @@ export class TemperaturaService {
   pasarACelsius(gradosKelvin: number) {
     return gradosKelvin - 273;
   }
-}
 }

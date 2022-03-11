@@ -65,3 +65,4 @@ export class AppComponent {
 // 3.) Creamos la variable en el hijo y la anotamos con @Input
 // 4.) En el template del hijo usamos la variable por interpolación PRIMERO SIN usar ninguna pipe
 // 5.) Utilizando la pipe DatePipe con el formato (dd/MM/yyyy)
+

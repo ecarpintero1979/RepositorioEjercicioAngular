@@ -11,6 +11,7 @@ export class MyFooterComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input() footer: string;
+  @Input() fecha: Date;
   @Output() setFooterEvent = new EventEmitter();
 
   updateFooter(param1: string) {

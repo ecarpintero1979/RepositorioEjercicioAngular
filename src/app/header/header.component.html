@@ -1,5 +1,5 @@
 <header>
-  <h2>{{ title }}</h2>
+  <h2>{{ title | slice: 4 | uppercase }}</h2>
   <br />
   <button on-click="updateCity('MADRID')">MADRID</button>
   <button on-click="updateCity('SEVILLA')">SEVILLA</button>

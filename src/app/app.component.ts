@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   city: string = 'NEW YORK';
   temp: string = '21';
-  title: string = 'FORECAST';
+  title: string = 'APP PREVISIÓN DEL TIEMPO';
   footer: string = 'FOOTER';
+  fecha: Date = new Date(1979, 3, 25);
 
   updateFooterText(current: string) {
     this.footer = current;
@@ -57,3 +58,10 @@ export class AppComponent {
 //    a) Sevilla: "https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/YZQY7B2VJNIHJNI2NUTNEER4UQ.jpg"
 //    b) Madrid: "https://s03.s3c.es/imag/_v0/770x420/f/7/a/madrid-centro-coches-dreamstime.jpg"
 //    c) La Coruña: https://www.sientegalicia.com/blog/wp-content/uploads/2017/10/Torre-de-Hercules-A-Coruna.jpg
+
+// EJERCICIO 6: Añadir una fecha en el componente root y mostrarla en el footer formateada con un pipe (dd/MM/yyyy)
+// 1.) Creamos una variable fecha de tipo Date en el componente root
+// 2.) Pasanos la variabe al componente hijo (footer) mediante el binding de propiedades [] en el template del padre
+// 3.) Creamos la variable en el hijo y la anotamos con @Input
+// 4.) En el template del hijo usamos la variable por interpolación PRIMERO SIN usar ninguna pipe
+// 5.) Utilizando la pipe DatePipe con el formato (dd/MM/yyyy)

@@ -1,4 +1,6 @@
 <div class="footer">
+  {{ fecha | date: 'dd/MM/yyyy' }}
+  <br />
   {{ footer }}
   <br />
   <button on-click="updateFooter('FOOTER ACTUALIZADO')">UPDATE FOOTER</button>

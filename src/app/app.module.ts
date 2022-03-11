@@ -6,6 +6,8 @@ import { MyHeaderComponent } from './header/header.component';
 import { MyFooterComponent } from './footer/footer.component';
 import { MyBodyComponent } from './body/body.component';
 
+import { TemperaturaService } from './temperatura.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,7 @@ import { MyBodyComponent } from './body/body.component';
     MyBodyComponent,
   ],
   imports: [BrowserModule],
-  providers: [],
+  providers: [TemperaturaService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

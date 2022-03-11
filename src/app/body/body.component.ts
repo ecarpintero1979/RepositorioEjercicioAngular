@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TemperaturaService } from '../temperatura.service';
 
 @Component({
   selector: 'app-body',
@@ -6,10 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./body.component.css'],
 })
 export class MyBodyComponent implements OnInit {
-  constructor() {}
+  constructor(private logger: TemperaturaService) {}
 
   ngOnInit(): void {}
 
   @Input() temp: string;
   @Input() city: string;
+
+  convertir() {
+    this.logger.pasarACelsius();
+    this.looger.pasarAKelvin();
+  }
 }
